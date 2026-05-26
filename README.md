@@ -1,1 +1,10 @@
-# -
+# 本地训练轮次对联邦学习的影响研究
+在联邦学习中，数据异构环境容易导致客户端模型更新方向出现偏差，本地训练轮次作为联邦学习的关键超参数，若设置不当将引发欠拟合或过拟合的问题。本文基于FedAvg算法，采用Dirichlet分布构造高度数据异构环境，在MNIST和CIFAR-10数据集上分别开展对比实验，本文总共设置了两个实验，通过控制变量法分别改变本地训练轮次和模型上传策略，探究不同轮次取值和相同轮次下不同上传策略对联邦学习的影响，并从全局模型精度、收敛性能及客户端局部拟合状态等多个层面展开综合分析。实验结果表明，本地训练轮次与模型性能呈非线性关系，轮次不足会导致欠拟合，轮次过多则会引发过拟合，且数据复杂度越高，过拟合的负面影响越显著。动态选取最优轮次模型上传的策略能够有效缓解因本地训练轮次过多而产生的过拟合问题，从而提升全局模型的泛化能力，为联邦学习中本地训练轮次的自适应选择提供了实验依据。
+
+In federated learning, the data heterogeneous environment is easy to cause the deviation of the client model update direction. As the key hyperparameter of federated learning, the local training rounds will cause the problem of underfitting or overfitting if set improperly. Based on the FedAvg algorithm, this thesis uses the Dirichlet distribution to construct a highly heterogeneous data environment, and conducts comparative experiments on the MNIST and CIFAR-10 datasets respectively. This thesis sets up two experiments in total. The local training rounds and model uploading strategies are changed by the control variable method, and the effects of different round values and different uploading strategies on federated learning under the same round are explored. Comprehensive analysis is carried out from multiple levels such as global model accuracy, convergence performance and local fitting state of the client. The experimental results show that the local training rounds have a non-linear relationship with the model performance. Insufficient rounds will lead to underfitting, and too many rounds will lead to overfitting. The higher the data complexity, the more significant the negative impact of overfitting. The strategy of dynamically selecting the optimal round model upload can effectively alleviate the overfitting problem caused by too many local training rounds, thereby improving the generalization ability of the global model and providing an experimental basis for the adaptive selection of local training rounds in federated learning.
+
+## 动态选取最优轮次的局部模型上传策略实验
+### MNIST数据集
+实验代码：https://www.kaggle.com/code/yjl11128/mnist-30-best
+### CIFAR-10数据集
+实验代码：https://www.kaggle.com/code/yjl11128/notebookd4b521b865
