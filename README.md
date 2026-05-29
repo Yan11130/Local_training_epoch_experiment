@@ -5,6 +5,6 @@ In federated learning, the data heterogeneous environment is easy to cause the d
 
 ## 动态选取最优轮次的局部模型上传策略实验
 ### MNIST数据集
-实验代码：https://www.kaggle.com/code/yjl11128/mnist-30-best
+实验代码：https://www.kaggle.com/code/yjl11128/mnist
 ### CIFAR-10数据集
-实验代码：https://www.kaggle.com/code/yjl11128/notebookd4b521b865
+实验代码：https://www.kaggle.com/code/yjl11128/cifar-10
